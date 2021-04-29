@@ -4,6 +4,6 @@
 int main()
 {
     std::cout << "Hello World!\n";
-    std::cout << "fuck" << endl;
+    std::cout << "fuck" << std::endl;
 }
 
