@@ -139,7 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GroceryApp.cpp" />
+    <ClCompile Include="src\Functions.cpp" />
+    <ClCompile Include="src\GroceryApp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Header.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\ShoppingList.txt" />
+    <Text Include="src\Items.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
