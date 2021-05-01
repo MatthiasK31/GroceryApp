@@ -146,8 +146,8 @@
     <ClInclude Include="src\Header.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\ShoppingList.txt" />
-    <Text Include="src\Items.txt" />
+    <Text Include="Items.txt" />
+    <Text Include="ShoppingList.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

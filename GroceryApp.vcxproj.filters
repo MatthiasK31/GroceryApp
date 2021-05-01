@@ -28,7 +28,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\ShoppingList.txt" />
-    <Text Include="src\Items.txt" />
+    <Text Include="Items.txt" />
+    <Text Include="ShoppingList.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

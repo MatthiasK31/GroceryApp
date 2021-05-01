@@ -1,0 +1,16 @@
+Head of Lettuce
+2.39
+Loaf of Bread
+2.59
+Tortilla Chips
+3.19
+Gum (1 pack)
+0.99
+Soda (1 Bottle)
+1.19
+1 Gal. Milk
+4.39
+Muffin
+0.89
+Water
+0.99
