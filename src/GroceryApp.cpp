@@ -38,8 +38,11 @@ int main()
 
 
     do {
+        
         cout << "What is your name?\t";
         getline(cin, userName, '\n');
+        
+        fout << "Grocery Shopping List for " << userName << endl;
 
         //run through the file in its entirety 
         while (!fin.eof()) {
