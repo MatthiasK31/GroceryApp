@@ -24,10 +24,12 @@ int main()
     //variables
     string continueOrNo, userName, letterCount = "abcdefgh";
     string answerChoice;
+    string reply, newItem;
+    double newPrice = 0;
     double numberOfItems;
     int count = 0;
     double totalItems, totalCost, multiplier = 0;
-    bool keepAsking = true, yesOrNo = true;
+    bool keepAsking = true, yesOrNo = true, notOnList = false;
     vector<string> sendToFile;
 
     //variables for data in file
@@ -103,8 +105,6 @@ int main()
                     break;
                 }
                 default: {
-                    string reply, newItem;
-                    double newPrice;
                     cout << "Would you like to enter another item that is not listed?\nType Y if so or type anything else to redo your answer choice.\t";
                     cin.ignore(INT_MAX, '\n');
                     getline(cin, reply);
@@ -114,6 +114,7 @@ int main()
                     }
                     reply = temp;
                     if (reply.at(0) == 'y' || reply == "yes") {
+                        notOnList = true;
                         cout << "Enter the name of the item:\t";
                         getline(cin, newItem);
                         cout << "Enter the price of this item:\t";
@@ -144,8 +145,12 @@ int main()
                     cin >> numberOfItems;
                     yesOrNo = checkValidNumInput(to_string(numberOfItems));
                 }
-
-                totalCost = multiplier * numberOfItems;
+                if (notOnList) {
+                    totalCost = newPrice * numberOfItems;
+                }
+                else {
+                    totalCost = multiplier * numberOfItems;
+                }
 
                 fout << fixed;
                 fout << setw(20) << setprecision(2) << totalCost << endl;
