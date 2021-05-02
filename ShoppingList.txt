@@ -1,0 +1,4 @@
+Lettuce				7.17
+Tortilla Chips				12.76
+beef				12.76
+Water				1.98

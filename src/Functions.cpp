@@ -2,33 +2,36 @@
 #include <iomanip>
 #include <vector>
 #include <iostream>
+#include <fstream>
 
 bool checkValidLetterInput(char tester)
 {
-	//try-cathc to validate input
+	std::ofstream fout("ShoppingList.txt");
+
+	//try-catch to validate input
 	try {
-		if (tester == tolower('A')) {
+		if (tester == 'a') {
 			return false;
 		}
-		else if (tester == tolower('B')) {
+		else if (tester == 'b') {
 			return false;
 		}
-		else if (tester == tolower('C')) {
+		else if (tester == 'c') {
 			return false;
 		}
-		else if (tester == tolower('D')) {
+		else if (tester == 'd') {
 			return false;
 		}
-		else if (tester == tolower('E')) {
+		else if (tester == 'e') {
 			return false;
 		}
-		else if (tester == tolower('F')) {
+		else if (tester == 'f') {
 			return false;
 		}
-		else if (tester == tolower('G')) {
+		else if (tester == 'g') {
 			return false;
 		}
-		else if (tester == tolower('H')) {
+		else if (tester == 'h') {
 			return false;
 		}
 		else {
@@ -41,6 +44,27 @@ bool checkValidLetterInput(char tester)
 	}
 	return false;
 
+}
+
+bool checkValidNumInput(std::string tester)
+{
+	//try-catch to validate input
+	try {
+		double temp = std::stod(tester);
+		int num = std::stoi(tester); // error trap this with a try/catch block
+
+		if (temp != num) {
+			return true;
+		}
+		if (num < 0) {
+			return true;
+		}
+	}
+	catch (std::invalid_argument& e) {
+		//prompt user for valid input/continue loop
+		return true;
+	}
+	return false;
 }
 
 void printItems(std::string letters, std::vector<std::string> itemNames, std::vector<double> itemPrices) {
