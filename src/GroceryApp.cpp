@@ -145,7 +145,7 @@ int main()
                 totalCost = multiplier * numberOfItems;
 
                 fout << fixed;
-                fout << "\t\t\t\t" << setprecision(2) << totalCost << endl;
+                fout << setw(20) << setprecision(2) << totalCost << endl;
                 totalCost = 0; totalItems = 0; answerChoice = "";
             }
         }

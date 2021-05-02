@@ -1,4 +1,3 @@
-Lettuce				7.17
-Tortilla Chips				12.76
-beef				12.76
-Water				1.98
+Lettuce                7.17
+Tortilla Chips               15.95
+beef                6.38
