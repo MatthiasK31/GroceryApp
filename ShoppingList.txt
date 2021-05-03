@@ -1,7 +1,7 @@
-Grocery Shopping List for: matt
+Grocery Shopping List for: Mark Tester
 
-Lettuce                4.78
-Water                2.97
-Soda                5.95
-matt, your total today is $13.70
+Lettuce                7.17
+Soda                4.76
+Beef                8.60
+Mark Tester, your total today is $20.53
 

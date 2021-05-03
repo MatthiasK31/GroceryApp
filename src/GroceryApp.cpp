@@ -1,9 +1,3 @@
-/*
-Matthias Kim
-AP Create Task
-May 3rd, 2021
-*/
-
 #include <iostream>
 #include <iomanip>
 #include <fstream>
