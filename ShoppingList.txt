@@ -1,7 +1,9 @@
-Grocery Shopping List for: Mark Tester
+Grocery Shopping List for: Matt Kim
 
-Lettuce                7.17
-Soda                4.76
-Beef                8.60
-Mark Tester, your total today is $20.53
+Lettuce                               9.56
+Tortilla Chips                              25.52
+Beef                              32.00
+Water                              24.00
+-----------------------------------------
+Matt Kim, your total today is $                              91.08
 
