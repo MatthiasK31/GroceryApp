@@ -31,8 +31,6 @@ int main()
     vector<double> prices;
     vector<double> payment;
 
-
-
     do {
         //ask for name and print top message in file
         userName = askAndPrintName();
@@ -181,8 +179,4 @@ int main()
     //close input/output streams
     fout.close();
     fin.close();
-
-
-
 }
-

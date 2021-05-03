@@ -1,9 +1,8 @@
-Grocery Shopping List for: Matt Kim
+Grocery Shopping List for: Mark Test
 
-Lettuce                               9.56
-Tortilla Chips                              25.52
-Beef                              32.00
-Water                              24.00
+Lettuce                               7.17
+Loaf of Bread                              20.72
+Beef                              16.80
 -----------------------------------------
-Matt Kim, your total today is $                              91.08
+Mark Test, your total today is $44.69
 
