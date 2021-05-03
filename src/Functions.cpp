@@ -4,6 +4,15 @@
 #include <iostream>
 #include <fstream>
 
+
+std::string askAndPrintName()
+{
+	std::string userName;
+	std::cout << "What is your name?\t";
+	std::getline(std::cin, userName, '\n');
+	return userName;
+}
+
 bool checkValidLetterInput(char tester)
 {
 	std::ofstream fout("ShoppingList.txt");

@@ -36,15 +36,15 @@ int main()
     string itemName, itemPrice;
     vector<string> items;
     vector<double> prices;
+    vector<double> payment;
 
 
 
     do {
-        
-        cout << "What is your name?\t";
-        getline(cin, userName, '\n');
-        
-        fout << "Grocery Shopping List for " << userName << endl;
+        //ask for name and print top message in file
+        userName = askAndPrintName();
+        fout << "Grocery Shopping List for: " << userName << "\n" << endl;
+
 
         //run through the file in its entirety 
         while (!fin.eof()) {
@@ -151,12 +151,21 @@ int main()
                 else {
                     totalCost = multiplier * numberOfItems;
                 }
+                payment.push_back(totalCost);
 
                 fout << fixed;
                 fout << setw(20) << setprecision(2) << totalCost << endl;
                 totalCost = 0; totalItems = 0; answerChoice = "";
             }
         }
+
+        double subtotal = 0;
+        for (int i = 0; i < payment.size(); i++) {
+            subtotal += payment.at(i);
+        }
+        fout << fixed;
+        fout << userName << ", your total today is $" << setprecision(2) << subtotal << '\n' << endl;
+
 
         
 

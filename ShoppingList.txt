@@ -1,3 +1,7 @@
-Grocery Shopping List for matt
-Lettuce                7.17
-Beef               12.60
+Grocery Shopping List for: matt
+
+Lettuce                4.78
+Water                2.97
+Soda                5.95
+matt, your total today is $13.70
+
