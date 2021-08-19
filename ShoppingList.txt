@@ -1,0 +1,8 @@
+Grocery Shopping List for: Mark Test
+
+Lettuce                               7.17
+Loaf of Bread                              20.72
+Beef                              16.80
+-----------------------------------------
+Mark Test, your total today is $44.69
+
