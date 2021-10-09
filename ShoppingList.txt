@@ -1,8 +1,8 @@
-Grocery Shopping List for: Mark Test
+Grocery Shopping List for: Matthias Kim
 
-Lettuce                               7.17
-Loaf of Bread                              20.72
-Beef                              16.80
+Loaf of Bread                               7.77
+Tortilla Chips                              12.76
+Gallon o/ Milk                               4.39
 -----------------------------------------
-Mark Test, your total today is $44.69
+Matthias Kim, your total today is $24.92
 
