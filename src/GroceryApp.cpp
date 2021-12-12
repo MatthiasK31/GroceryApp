@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <fstream>
 #include <string>
+#include <cstring>
 #include <vector>
 #include "Header.h"
 
@@ -14,13 +15,19 @@ int main()
     //input and output streams
     ifstream fin("Items.txt");
     ofstream fout("ShoppingList.txt");
+    FILE* pFile = fopen("ShoppingList.txt", "a");
+
 
     //variables
     string continueOrNo, userName, letterCount = "abcdefgh";
     string answerChoice;
     string reply, currentItem, newItem;
+
+    string price;
     double newPrice = 0;
-    double numberOfItems;
+
+    string item;
+    int numberOfItems;
     int count = 0;
     double totalItems, totalCost, multiplier = 0;
     bool keepAsking = true, yesOrNo = true, notOnList = false;
@@ -34,7 +41,7 @@ int main()
     do {
         //ask for name and print top message in file
         userName = askAndPrintName();
-        fout << "Grocery Shopping List for: " << userName << "\n" << endl;
+        fprintf(pFile, "Grocery Shopping List for: %s\n------------------------------------------\n", userName.c_str());
 
 
         //run through the file in its entirety 
@@ -54,8 +61,10 @@ int main()
         cout << endl;
 
         while (keepAsking) {
-            cout << "What would you like to purchase today? Please enter the corresponding letter to the food item you want (Press N to break):  ";
-            cin >> answerChoice;
+            if (count == 0)
+                cout << "What would you like to purchase today?" << endl;
+            cout << "Please enter the corresponding letter to the food item you want(Press N to break) : ";
+            getline(cin, answerChoice);
             answerChoice = tolower(answerChoice.at(0));
             //switch-case statement to check that the input satisfies the conditions of being a letter from a to h 
             switch (answerChoice.at(0)) {
@@ -113,7 +122,8 @@ int main()
                         cout << "Enter the name of the item:\t";
                         getline(cin, currentItem);
                         cout << "Enter the price of this item:\t";
-                        cin >> newPrice;
+                        getline(cin, price);
+                        newPrice = stod(price);
                     }
                     else {
                         continue;
@@ -127,13 +137,14 @@ int main()
             else {
                 //ask how many of the item the user would like to purchase; error trap and loop until a positive integer is entered
                 cout << "How many of this item would you like to purchase?\t";
-                cin >> numberOfItems;
+                getline(cin, item);
+                numberOfItems = stoi(item);
                 yesOrNo = checkValidNumInput(to_string(numberOfItems));
 
                 while (yesOrNo) {
                     cout << "\tEnter a valid number:\t";
-                    cin.clear();
-                    cin >> numberOfItems;
+                    getline(cin, item);
+                    numberOfItems = stoi(item);
                     yesOrNo = checkValidNumInput(to_string(numberOfItems));
                 }
                 //calculate the total cost of the selected item and its quantity based on the type of item entered
@@ -146,27 +157,33 @@ int main()
                 payment.push_back(totalCost);
 
                 //print the item and the cost of all the items into a separate file
-                fout << fixed;
-                fout << currentItem << setw(35) << setprecision(2) << totalCost << endl;
-                totalCost = 0; totalItems = 0; answerChoice = "";
+                //new file pointer; print out formatted table
+                if (numberOfItems == 1)
+                    currentItem += " x1";
+                else
+                    currentItem += " x" + to_string(numberOfItems);
+                fprintf(pFile, "%-35s$%-10.2f\n", currentItem.c_str(), totalCost);
+                count++;
             }
         }
 
         //calculate total and print out final statement
         double subtotal = 0;
+        char* charC;
+        charC = new char[userName.length() + 1];
+        strcpy(charC, userName.c_str());
         for (int i = 0; i < payment.size(); i++) {
             subtotal += payment.at(i);
         }
-        fout << "-----------------------------------------" << endl;
-        fout << fixed;
-        fout << userName << ", your total today is $" << setprecision(2) << subtotal << '\n' << endl;
+        fprintf(pFile, "-----------------------------------------\n");
+        fprintf(pFile, "%s, your total today is $%.2f\n\n\n", charC, subtotal);
 
 
         
         //ask for new person to enter data, if not, break program
         string e;
         cout << "Is there another person that wants to shop? Enter a Y if so and any other letter to break. ";
-        cin >> continueOrNo;
+        getline(cin, continueOrNo);
         for (int i = 0; i < continueOrNo.length(); i++) {
             e += tolower(continueOrNo.at(i));
         }
