@@ -68,69 +68,69 @@ int main()
             answerChoice = tolower(answerChoice.at(0));
             //switch-case statement to check that the input satisfies the conditions of being a letter from a to h 
             switch (answerChoice.at(0)) {
-                case 'a':
-                    currentItem = "Lettuce";
-                    multiplier = 2.39;
-                    break;
-                case 'b':
-                    currentItem = "Loaf of Bread";
-                    multiplier = 2.59;
-                    break;
-                case 'c':
-                    currentItem = "Tortilla Chips";
-                    multiplier = 3.19;
-                    break;
-                case 'd':
-                    currentItem = "Gum";
-                    multiplier = 0.99;
-                    break;
-                case 'e':
-                    currentItem = "Soda";
-                    multiplier = 1.19;
-                    break;
-                case 'f':
-                    currentItem = "Gallon o/ Milk";
-                    multiplier = 4.39;
-                    break;
-                case 'g':
-                    currentItem = "Muffin";
-                    multiplier = 0.89;
-                    break;
-                case 'h':
-                    currentItem = "Water";
-                    multiplier = 0.99;
-                    break;
-                case 'n':{
-                    keepAsking = false;
-                    break;
-                }
-                default: {
-                    //allows the user to enter an item not on the menu of items
-                    cout << "Would you like to enter another item that is not listed?\nType Y if so or type anything else to redo your answer choice.\t";
-                    cin.ignore(INT_MAX, '\n');
-                    getline(cin, reply);
-                    string temp;
+            case 'a':
+                currentItem = "Lettuce";
+                multiplier = 2.39;
+                break;
+            case 'b':
+                currentItem = "Loaf of Bread";
+                multiplier = 2.59;
+                break;
+            case 'c':
+                currentItem = "Tortilla Chips";
+                multiplier = 3.19;
+                break;
+            case 'd':
+                currentItem = "Gum";
+                multiplier = 0.99;
+                break;
+            case 'e':
+                currentItem = "Soda";
+                multiplier = 1.19;
+                break;
+            case 'f':
+                currentItem = "Gallon o/ Milk";
+                multiplier = 4.39;
+                break;
+            case 'g':
+                currentItem = "Muffin";
+                multiplier = 0.89;
+                break;
+            case 'h':
+                currentItem = "Water";
+                multiplier = 0.99;
+                break;
+            case 'n': {
+                keepAsking = false;
+                break;
+            }
+            default: {
+                //allows the user to enter an item not on the menu of items
+                cout << "Would you like to enter another item that is not listed?\nType Y if so or type anything else to redo your answer choice.\t";
+                cin.ignore(INT_MAX, '\n');
+                getline(cin, reply);
+                string temp;
 
-                    //turn response into full lowercase
-                    for (int i = 0; i < reply.length(); i++) {
-                        temp += tolower(reply.at(i));
-                    }
-                    reply = temp;
-                    //take the name and price of the item
-                    if (reply.at(0) == 'y' || reply == "yes") {
-                        notOnList = true;
-                        cout << "Enter the name of the item:\t";
-                        getline(cin, currentItem);
-                        cout << "Enter the price of this item:\t";
-                        getline(cin, price);
-                        newPrice = stod(price);
-                    }
-                    else {
-                        continue;
-                    }
+                //turn response into full lowercase
+                for (int i = 0; i < reply.length(); i++) {
+                    temp += tolower(reply.at(i));
+                }
+                reply = temp;
+                //take the name and price of the item
+                if (reply.at(0) == 'y' || reply == "yes") {
+                    notOnList = true;
+                    cout << "Enter the name of the item:\t";
+                    getline(cin, currentItem);
+                    cout << "Enter the price of this item:\t";
+                    getline(cin, price);
+                    newPrice = stod(price);
+                }
+                else {
+                    continue;
                 }
             }
-            
+            }
+
             if (tolower(answerChoice.at(0)) == 'n') {
                 break;
             }
@@ -179,7 +179,7 @@ int main()
         fprintf(pFile, "%s, your total today is $%.2f\n\n\n", charC, subtotal);
 
 
-        
+
         //ask for new person to enter data, if not, break program
         string e;
         cout << "Is there another person that wants to shop? Enter a Y if so and any other letter to break. ";
@@ -190,7 +190,7 @@ int main()
         cin.clear();
         yesOrNo = true;
         keepAsking = true;
-        
+
     } while (continueOrNo.at(0) == 'y' || continueOrNo == "yes");
 
     //close input/output streams
