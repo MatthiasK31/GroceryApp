@@ -28,8 +28,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Items.txt" />
-    <Text Include="ShoppingList.txt">
+    <Text Include="src\Items.txt" />
+    <Text Include="src\ShoppingList.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>

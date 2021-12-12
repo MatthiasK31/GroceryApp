@@ -1,0 +1,29 @@
+Grocery Shopping List for: Matthias Kim
+------------------------------------------
+Gum x3                             $2.97      
+Water x2                           $1.98      
+Muffin x6                          $5.34      
+Lettuce x8                         $19.12     
+-----------------------------------------
+Matthias Kim, your total today is $29.41
+
+
+Grocery Shopping List for: Simu Liu
+------------------------------------------
+Water x7                           $6.93      
+Gallon o/ Milk x1                  $4.39      
+Tortilla Chips x3                  $9.57      
+-----------------------------------------
+Simu Liu, your total today is $50.30
+
+
+Grocery Shopping List for: Olivia Rodrigo
+------------------------------------------
+Gum x4                             $3.96      
+Loaf of Bread x2                   $5.18      
+Gallon o/ Milk x1                  $4.39      
+Water x8                           $7.92      
+-----------------------------------------
+Olivia Rodrigo, your total today is $71.75
+
+
