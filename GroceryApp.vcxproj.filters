@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\GroceryApp.cpp">
+    <ClCompile Include="PROJ FILES\GroceryApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Functions.cpp">
+    <ClCompile Include="PROJ FILES\Functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Header.h">
+    <ClInclude Include="PROJ FILES\Header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\Items.txt" />
-    <Text Include="src\ShoppingList.txt">
+    <Text Include="PROJ FILES\Items.txt" />
+    <Text Include="PROJ FILES\ShoppingList.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>
